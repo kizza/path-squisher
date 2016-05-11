@@ -1,14 +1,12 @@
 'use strict'
 
-var _ = require('lodash')
-
 module.exports = function (paths) {
-  return _.reduce(paths, function(result, path){
-    var exists = _.chain(result).map(function(result) {
+  return paths.sort().reverse().reduce((result, path) => {
+    var exists = result.map((result) => {
       return (result + '/').indexOf(path + '/') >= 0
-    }).reduce(function(looking, match){
+    }).reduce((looking, match) => {
       return match || looking
-    }, false).value()
+    }, false)
     return exists ? result : result.push(path) && result
   }, [])
 }
