@@ -1,0 +1,19 @@
+{
+  "name": "pathmatcher",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm installl && npm test",
+    "test": "node_modules/.bin/mocha test"
+  },
+  "author": "Keiran O'Leary",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5"
+  },
+  "dependencies": {
+    "lodash": "^4.12.0"
+  }
+}
